@@ -11,4 +11,5 @@ This project is an example to learn how redux work's. After the interview I fell
 * Define some UI to develop.
 * Define some rules and some app behaivor that need redux to work's.
 
-~~~~
+
+OBS: to keep my focus in use redux, I decide put tailwind with styled components to organize the components and give power to create some components and validate
