@@ -1,8 +1,8 @@
 import React from "react"
 import { BrowserRouter, Route, Switch } from "react-router-dom"
 
-import Main from "./pages/Main"
-import StepOne from "./pages/StepOne"
+import Main from "./components/Main"
+import StepOne from "./components/StepOne"
 
 export default function Routes() {
   return (

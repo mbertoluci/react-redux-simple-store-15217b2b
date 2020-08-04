@@ -1,19 +1,14 @@
 import React from "react"
 
-import Header from "../../components/Header"
-import Body from "../../components/Body"
-import Bottom from "../../components/Bottom"
+import Header from "./Header"
+import Body from "./Body"
+import Bottom from "./Bottom"
 
 import styled from "styled-components"
 import tw from "twin.macro"
 
 const Container = styled.div`
-  ${tw`
-    flex
-    flex-col
-    w-full
-    h-screen
-  `}
+  ${tw`flex flex-col w-full h-screen`}
 `
 
 export default function StepOne(){
