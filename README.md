@@ -6,7 +6,7 @@ It's a simple business example, where user can put some message in input text an
 
 This project contain three main components:
 
-header: contain a label eith the words "Inbox(0)" and it keep watching an attribute count from reducer state, the each add message on array the count attribute receiver one more number and header update the inbox count.
+header: contain a label with the words "Inbox(0)" and it keep watching an attribute count from reducer state, the each add message on array the count attribute receiver one more number and header update the inbox count.
 
 body: this component show every message that was inputed on reducer message array and show to user a trash icon that the user can be click to delete the card from dashboard.
 
