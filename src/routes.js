@@ -12,5 +12,5 @@ export default function Routes() {
         <Route path="/stepone" component={StepOne} />        
       </Switch>
     </BrowserRouter>
-  );
+  )
 }

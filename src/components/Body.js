@@ -1,54 +1,27 @@
 import React from "react"
-
-import { connect } from 'react-redux';
-
-import {
-  ADD_MESSAGE,
-  DELETE_MESSAGE
-} from '../constants/actionTypes';
-
+import { connect } from 'react-redux'
 import styled from "styled-components"
 import tw from "twin.macro"
 
+import MessageBox from "./MessageBox"
+
 const Container = styled.div`
-  ${tw`bg-pink-300 flex-1`}
-`
-const MessageBox = styled.div`
-  ${tw`bg-white rounded-sm w-48 m-2`}
+  ${tw`flex-1 overflow-y-hidden overflow-y-scroll`}
 `
 
-const mapStateToProps = state => ({ ...state.message });
-
-const mapDispatchToProps = dispatch => ({
-  addMessage: message =>
-    dispatch({ type: ADD_MESSAGE, key: Math.random(), value: message }),
-  removeMessage: key =>
-    dispatch({ type: DELETE_MESSAGE, key })
-});
-
+const mapStateToProps = state => ({ ...state.message })
 
 function Body(props){
-
-  const onClickRemoveMessage = (key) => ev => {
-    props.removeMessage(key);
-  };
-
+  
   return (
-    <Container>
+    <Container className="bg-custom-200">
     {props.messages.map(message => {
         return (
-          <MessageBox key={message.key}>
-            <div>
-              <button onClick={onClickRemoveMessage(message.key)}>x</button>
-            </div>  
-            <div>
-              {message.value}
-            </div> 
-          </MessageBox>
-        );
+          <MessageBox key={message.key} id={message.key} message={message.value}/>
+        )
       })}  
     </Container>
   )
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Body);
+export default connect(mapStateToProps, null)(Body)
