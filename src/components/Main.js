@@ -1,13 +1,22 @@
 import React from "react"
-import {Link} from "react-router-dom"
 
+import Header from "./Header"
+import Body from "./Body"
+import Bottom from "./Bottom"
+
+import styled from "styled-components"
+import tw from "twin.macro"
+
+const Container = styled.div`
+  ${tw`flex flex-col w-full h-screen`}
+`
 
 export default function Main(){
   return (
-    <div>
-      <ul>
-        <li><Link to="/stepone">StepOne</Link></li>
-      </ul>
-    </div>
+    <Container>
+      <Header />
+      <Body />
+      <Bottom />
+    </Container>
   )
 }
