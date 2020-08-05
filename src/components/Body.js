@@ -14,7 +14,7 @@ const mapStateToProps = state => ({ ...state.message })
 function Body(props){
   
   return (
-    <Container className="bg-custom-200">
+    <Container {...props} className="bg-custom-200">
     {props.messages.map(message => {
         return (
           <MessageBox key={message.key} id={message.key} message={message.value}/>

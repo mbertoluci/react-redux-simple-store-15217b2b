@@ -42,7 +42,7 @@ function Bottom(props){
   }
 
   return (
-    <Container className="bg-custom-100">
+    <Container {...props} className="bg-custom-100">
       <form onSubmit={submitForm()}>
         <Input type="text" 
                placeholder="Insert your message here!"               

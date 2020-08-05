@@ -12,7 +12,7 @@ const mapStateToProps = state => ({ ...state.message });
 
 function Header(props){
   return (
-    <Container className="bg-custom-100">
+    <Container {...props} className="bg-custom-100">
       Inbox ({props.count})
     </Container>
   )
